@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollytelling</title>
+    <script src="https://unpkg.com/scrollama"></script>
+    <style>
+      html,
+      body,
+      main {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #scrolly {
+        position: relative;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-color: lightgrey;
+      }
+      #scrolly > * {
+        flex: 1 0 auto;
+      }
+      .step {
+        height: 400px;
+        margin: 0 auto 2rem;
+        background-color: #bbb;
+      }
+      article {
+        position: relative;
+        max-width: 30vw;
+      }
+      figure {
+        position: sticky;
+        height: 400px;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 20px;
+        background-color: darkblue;
+        border: 5px solid black;
+        top: 0;
+      }
+      .active {
+        background-color: aliceblue;
+      }
+      #scrollTxt {
+        color: aliceblue;
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="intro">
+        <h1>This is a scrollytelling example</h1>
+      </section>
+      <section id="scrolly">
+        <article>
+          <div class="step">
+            <h2>This is the first subheading</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              temporibus impedit quibusdam, nihil voluptatum veniam ad excepturi
+              rem, labore, ratione alias voluptas minus esse ducimus. Dolorem
+              provident perspiciatis aspernatur aperiam.
+            </p>
+          </div>
+          <div class="step">
+            <h2>This is the 2nd subheading</h2>
+            <p>
+              Doloribus, distinctio maiores sunt quas facere numquam accusantium
+              rem non beatae nisi voluptatum tempora quisquam veniam, doloremque
+              odio dicta at optio alias!
+            </p>
+          </div>
+          <div class="step">
+            <h2>This is the thi3d subheading</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+              dolorum mollitia quae temporibus voluptate quia maiores eos
+              officia quis ut magni cum ratione voluptatum excepturi libero
+              distinctio, nostrum quisquam exercitationem.
+            </p>
+          </div>
+          <div class="step">
+            <h2>This is the FOURTH subheading</h2>
+            <p>
+              Deleniti odit minus commodi accusamus eius nisi laborum, ad unde
+              dolor fugiat asperiores non animi ipsa voluptatibus maiores vel
+              harum blanditiis velit!
+            </p>
+          </div>
+        </article>
+        <figure>
+          <h3 id="scrollTxt"></h3>
+        </figure>
+      </section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus
+        excepturi optio iure error molestiae recusandae cumque reprehenderit
+        quos repellendus quo maxime cum ipsa rem, velit, minus blanditiis,
+        laborum beatae! Quibusdam eos obcaecati dolore corrupti quo voluptas
+        alias ratione voluptates itaque assumenda doloribus quaerat consequatur
+        id fugit porro dicta dolor odio, similique quam tenetur quisquam
+        officiis quae! Eaque, quae dolore? Non aliquam sed dignissimos ad itaque
+        voluptate ut autem et possimus, optio porro veritatis iusto qui
+        consequuntur totam minima, aperiam laudantium molestias reiciendis
+        fugiat tempore consequatur placeat asperiores! Minus, facere. Ea culpa
+        ipsam, tempore temporibus incidunt assumenda ab quo optio ratione
+        obcaecati hic corrupti ullam earum saepe voluptate totam molestias nemo
+        debitis? Ad quae ullam nam? Deserunt ratione eligendi consectetur? Nihil
+        tempore, totam quis cupiditate perferendis officia voluptate quasi
+        exercitationem voluptates quo omnis iure quos quam nulla amet corporis
+        enim est repudiandae libero ducimus deserunt voluptatibus, dolor alias
+        nisi. Minus! Eligendi tempore ipsum suscipit aspernatur labore et.
+        Ducimus, reiciendis repellat. Doloremque sapiente, eaque totam nam
+        nesciunt quaerat asperiores cupiditate repudiandae amet nulla libero
+        soluta necessitatibus eveniet laboriosam non dolorum vero! Maiores
+        impedit minima molestias nesciunt laboriosam, sint qui consectetur neque
+        quibusdam possimus repudiandae quas modi eligendi cupiditate quasi, rem
+        quos at ducimus saepe doloremque enim esse illo, totam voluptates.
+        Alias. Necessitatibus iusto voluptate consequatur deserunt doloribus
+        magnam doloremque sed odio! Ex pariatur eligendi, sunt ducimus vitae qui
+        aliquid, corrupti eaque mollitia provident ipsum at sapiente soluta, cum
+        modi facere reiciendis? Omnis, consectetur. Accusamus similique, quae
+        laborum excepturi eum, nesciunt neque nostrum cum molestias rem nam
+        laudantium doloremque recusandae magnam possimus id. Ratione ut quos
+        necessitatibus veritatis saepe, maiores harum atque. Sit voluptatibus
+        quas, maxime mollitia quod aut excepturi cupiditate? Delectus cumque
+        eveniet esse ipsa aspernatur blanditiis at veritatis odit voluptas.
+        Ducimus debitis necessitatibus ex porro repudiandae asperiores impedit
+        ullam incidunt.
+      </p>
+    </main>
+  </body>
+  <script>
+    let scrolly = document.querySelector("#scrolly");
+    let img = scrolly.querySelector("figure img");
+    let article = scrolly.querySelector("article");
+    let steps = scrolly.querySelector(".step");
+    let figureMargin = 0.1;
+    let st = scrolly.querySelector("#scrollTxt");
+    function setSize() {
+      let stepHeight = Math.floor(window.innerHeight * 0.9);
+      scrolly.querySelector("figure").style.top = figureMargin + "px";
+    }
+    let scrollyTeller = scrollama();
+
+    function init() {
+      setSize();
+
+      scrollyTeller
+        .setup({
+          step: "#scrolly article .step",
+          offset: 0.3,
+          debug: false,
+        })
+        .onStepEnter((res) => {
+          console.log(res);
+          res.element.classList.add("active");
+          st.innerHTML = res.index + 1;
+          //   img.src = images[res.index];
+        })
+        .onStepExit((res) => {
+          res.element.classList.remove("active");
+        });
+    }
+    init();
+  </script>
+</html>

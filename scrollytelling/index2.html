@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScrollMagic</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      #intro,
+      .scroll {
+        width: 90vw;
+
+        margin: 5vh 5vw;
+        box-sizing: border-box;
+      }
+      #intro {
+        height: 90vh;
+        background-color: lightyellow;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #sm_intro {
+        color: chocolate;
+        padding: 5vh 5vw;
+        background-color: beige;
+      }
+      .scroll {
+        height: 300vh;
+        background-color: lightcoral;
+      }
+      .txt1 {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="intro">
+      <h1 id="sm_intro">ScrollMagic</h1>
+    </div>
+    <div class="scroll">
+      <div id="box1">
+        <p class="txt1">This will stay on top</p>
+      </div>
+    </div>
+    <div class="scroll"></div>
+  </body>
+</html>
