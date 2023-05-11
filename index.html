@@ -27,14 +27,14 @@
     <div id="map" style="height: 600px; width: 600px"></div>
     <script type="text/javascript">
       let map = L.map("map", {
-        center: [52.25600282867075, -3.832320954338758],
+        center: [52.35600282867075, -3.832320954338758],
         minZoom: 8, // to not zoom out too much
         zoom: 8,
       });
       document
         .getElementById("reset-zoom")
         .addEventListener("click", function () {
-          map.setView([52.25600282867075, -3.832320954338758], 8);
+          map.setView([52.35600282867075, -3.832320954338758], 8);
         });
 
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -81,13 +81,16 @@
                   pm25Markers.push(marker);
                 }
               }
+              let pm25_layer = L.layerGroup(pm25Markers);
+              // console.log(pm25_layer)
             } else {
               for (let marker of pm25Markers) {
-                map.removeLayer(marker);
-              }
+                // map.removeLayer(marker);
+                map.removeLayer(pm25_layer);
+              } 
               pm25Markers.length = 0;
             }
-            console.log(pm25Markers)
+            console.log(pm25Markers);
           });
           for (let c of results.data) {
             // console.log(c)
