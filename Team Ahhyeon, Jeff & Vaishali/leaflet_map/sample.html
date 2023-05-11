@@ -20,6 +20,10 @@
   </head>
   <body>
     <button id="reset-zoom">Reset Zoom</button>
+    <input type="checkbox" id="PM 2.5" name="PM 2.5" checked />
+    <label for="PM 2.5">PM 2.5</label>
+    <input type="checkbox" id="Other Pollutants" name="Other Pollutants" />
+    <label for="Other Pollutants">Other Pollutants</label>
     <div id="map" style="height: 800px"></div>
     <script type="text/javascript">
       let map = L.map("map", {
@@ -41,28 +45,65 @@
 
       let data = "wales_aqm.csv";
 
+      let pm25_icon = L.icon({
+        iconUrl: "Images/location_pin_6.png",
+        iconSize: [38, 55],
+      });
+      let others_icon = L.icon({
+        iconUrl: "Images/location_pin_3.png",
+        iconSize: [38, 55],
+      });
+
+      const pm25Checkbox = document.getElementById("PM 2.5");
+      const otherPollutantsCheckbox =
+        document.getElementById("Other Pollutants");
+      const pm25Markers = [];
+      const otherPollutantsMarkers = [];
+
       Papa.parse(data, {
         download: true,
         header: true,
         complete: function (results) {
           results.data.pop();
           // console.log(results.data);
-          pm25_coords = [];
-          for (let r of results.data) {
-            pm25_coords.push(r);
-            if (r["PM 2.5"] == "Yes") {
-              console.log(r);
+          pm25Checkbox.addEventListener("change", () => {
+            if (pm25Checkbox.checked) {
+              console.log("Showing PM 2.5 monitors");
+              for (let c of results.data) {
+                if (c["PM 2.5"] == "Yes") {
+                  const marker = L.marker([c["Latitude"], c["Longitude"]], {
+                    icon: pm25_icon,
+                  })
+                    .addTo(map)
+                    .bindTooltip(
+                      `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
+                    );
+                  pm25Markers.push(marker);
+                }
+              }
+            } else {
+              for (let marker of pm25Markers) {
+                map.removeLayer(marker);
+              }
+              pm25Markers.length = 0;
+            }
+            console.log(pm25Markers)
+          });
+          for (let c of results.data) {
+            // console.log(c)
+            if (c["PM 2.5"] == "Yes") {
+              L.marker([c["Latitude"], c["Longitude"]], { icon: pm25_icon })
+                .addTo(map)
+                .bindTooltip(
+                  `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
+                );
+              // .openPopup();
+            } else {
+              L.marker([c["Latitude"], c["Longitude"]], { icon: others_icon })
+                .addTo(map)
+                .bindTooltip(`${c["Place"]}`);
             }
           }
-          for (let c of pm25_coords) {
-            // console.log(c)
-            L.marker([c["Latitude"], c["Longitude"]])
-              .addTo(map)
-              // .bindPopup();
-              .bindPopup(`${c["Place"]}`);
-            // .openPopup();
-          }
-          // console.log(pm25_coords)
         },
       });
     </script>
