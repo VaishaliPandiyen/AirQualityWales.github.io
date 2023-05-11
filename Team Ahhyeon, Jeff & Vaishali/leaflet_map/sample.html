@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaflet map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  </head>
+  <body>
+    <button id="reset-zoom">Reset Zoom</button>
+    <div id="map" style="height: 800px"></div>
+    <script type="text/javascript">
+      let map = L.map("map", {
+        center: [52.25600282867075, -3.832320954338758],
+        minZoom: 8, // to not zoom out too much
+        zoom: 8,
+      });
+      document
+        .getElementById("reset-zoom")
+        .addEventListener("click", function () {
+          map.setView([52.25600282867075, -3.832320954338758], 8);
+        });
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+
+      let data = "wales_aqm.csv";
+
+      Papa.parse(data, {
+        download: true,
+        header: true,
+        complete: function (results) {
+          results.data.pop();
+          // console.log(results.data);
+          pm25_coords = [];
+          for (let r of results.data) {
+            pm25_coords.push(r);
+            if (r["PM 2.5"] == "Yes") {
+              console.log(r);
+            }
+          }
+          for (let c of pm25_coords) {
+            // console.log(c)
+            L.marker([c["Latitude"], c["Longitude"]])
+              .addTo(map)
+              // .bindPopup();
+              .bindPopup(`${c["Place"]}`);
+            // .openPopup();
+          }
+          // console.log(pm25_coords)
+        },
+      });
+    </script>
+    <!-- src: https://leafletjs.com/examples/quick-start/ -->
+  </body>
+</html>
