@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaflet map</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -19,97 +26,137 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   </head>
   <body>
-    <button id="reset-zoom">Reset Zoom</button>
-    <input type="checkbox" id="PM 2.5" name="PM 2.5" checked />
-    <label for="PM 2.5">PM 2.5</label>
-    <input type="checkbox" id="Other Pollutants" name="Other Pollutants" />
-    <label for="Other Pollutants">Other Pollutants</label>
-    <div id="map" style="height: 600px; width: 600px"></div>
-    <script type="text/javascript">
-      let map = L.map("map", {
-        center: [52.35600282867075, -3.832320954338758],
-        minZoom: 8, // to not zoom out too much
-        zoom: 8,
-      });
-      document
-        .getElementById("reset-zoom")
-        .addEventListener("click", function () {
-          map.setView([52.35600282867075, -3.832320954338758], 8);
-        });
+    <header class="header sticky-top navbar navbar-light">
 
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
-
-      let data = "wales_aqm.csv";
-
-      let pm25_icon = L.icon({
-        iconUrl: "Images/location_pin_6.png",
-        iconSize: [38, 55],
-      });
-      let others_icon = L.icon({
-        iconUrl: "Images/location_pin_3.png",
-        iconSize: [38, 55],
-      });
-
-      const pm25Checkbox = document.getElementById("PM 2.5");
-      const otherPollutantsCheckbox =
-        document.getElementById("Other Pollutants");
-      const pm25Markers = [];
-      const otherPollutantsMarkers = [];
-
-      Papa.parse(data, {
-        download: true,
-        header: true,
-        complete: function (results) {
-          results.data.pop();
-          // console.log(results.data);
-          pm25Checkbox.addEventListener("change", () => {
-            if (pm25Checkbox.checked) {
-              console.log("Showing PM 2.5 monitors");
-              for (let c of results.data) {
-                if (c["PM 2.5"] == "Yes") {
-                  const marker = L.marker([c["Latitude"], c["Longitude"]], {
-                    icon: pm25_icon,
-                  })
-                    .addTo(map)
-                    .bindTooltip(
-                      `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
-                    );
-                  pm25Markers.push(marker);
-                }
-              }
-              let pm25_layer = L.layerGroup(pm25Markers);
-              // console.log(pm25_layer)
-            } else {
-              for (let marker of pm25Markers) {
-                // map.removeLayer(marker);
-                map.removeLayer(pm25_layer);
-              } 
-              pm25Markers.length = 0;
-            }
-            console.log(pm25Markers);
-          });
-          for (let c of results.data) {
-            // console.log(c)
-            if (c["PM 2.5"] == "Yes") {
-              L.marker([c["Latitude"], c["Longitude"]], { icon: pm25_icon })
-                .addTo(map)
-                .bindTooltip(
-                  `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
-                );
-              // .openPopup();
-            } else {
-              L.marker([c["Latitude"], c["Longitude"]], { icon: others_icon })
-                .addTo(map)
-                .bindTooltip(`${c["Place"]}`);
-            }
-          }
-        },
-      });
-    </script>
-    <!-- src: https://leafletjs.com/examples/quick-start/ -->
+    </header>
+    <section class="article">
+      <h1>Headline</h1>
+      <h4>Subhead</h4>
+      <i>Team members</i>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet
+        officia accusamus. Fuga deleniti ducimus, sint porro amet ipsam soluta
+        hic nihil facilis eveniet quas perspiciatis non quidem beatae natus?<br /><br />
+        Perferendis eveniet voluptas possimus dolor placeat voluptates ad
+        consequuntur rerum dolores explicabo consectetur nihil, delectus magni,
+        officiis dolore tempore minima fugiat exercitationem eligendi voluptatum
+        aspernatur eius! Rerum minus explicabo dolor.<br /><br />
+        Enim itaque sed commodi ducimus aliquid ab, officia sequi cum veniam
+        iusto ullam neque earum quas quis autem similique, nam eaque doloribus
+        necessitatibus dolore provident minima odit fuga! Itaque, cupiditate.<br /><br />
+        Culpa, impedit, rem quae illo magnam excepturi cum aliquam mollitia
+        reiciendis tempore, dolore omnis voluptatum? Et porro reiciendis
+        sapiente voluptatem esse quae cumque vel, dolore adipisci vero repellat
+        iste quod.<br /><br />
+        Amet, voluptas, fuga nesciunt rem eligendi quisquam est earum sint
+        corrupti provident modi dolores dolorum. Mollitia ratione aspernatur
+        odio. Voluptate obcaecati in atque, ratione quo consequuntur inventore
+        ad iure saepe.<br /><br />
+        Ipsam quia explicabo a labore, ea architecto eius praesentium natus sit
+        molestias eaque perferendis nesciunt fugit deleniti at consequuntur?
+        Consectetur sequi obcaecati explicabo aliquam fugiat nam cumque harum
+        corporis? Possimus. Magni adipisci, cumque dolorem sapiente dignissimos
+        commodi illo quidem earum velit vero, quaerat nisi ab reprehenderit
+        dolorum quos. Maxime, vitae iure magni eaque obcaecati saepe ad
+        explicabo asperiores? Illum, voluptates.<br /><br />
+        Fuga quibusdam voluptates non libero consequuntur incidunt laboriosam
+        soluta inventore quidem repudiandae ex officia id, minima eum excepturi,
+        adipisci similique dolorem recusandae explicabo, numquam itaque. Dolore
+        obcaecati at ratione debitis! Temporibus vero provident amet consectetur
+        expedita ratione, obcaecati minima consequatur optio, quidem quasi,
+        praesentium officia asperiores corporis odio inventore ea omnis neque ut
+        esse unde incidunt ab. Ullam, numquam quibusdam.<br /><br />
+        Natus nisi ad aut commodi provident deserunt doloribus eveniet facere
+        enim minima, vitae, eius laudantium a eos beatae. Sed officia totam
+        minus tempore maiores accusamus ex nihil necessitatibus hic nobis.
+        Architecto ex nisi repudiandae facere dolores laborum? Tempora nisi
+        aspernatur reiciendis nulla iste omnis architecto. Ex, impedit minima
+        enim autem, nostrum harum magnam perspiciatis quas nisi mollitia, iure
+        consectetur dolores? Maiores nemo nulla saepe aut porro velit, quam
+        minima fuga deserunt, optio alias! Labore amet soluta exercitationem
+        incidunt? Labore quae in iure vitae esse debitis minima molestiae
+        repellat! Quos, recusandae.<br /><br />
+        Enim magnam expedita illum, ducimus culpa libero similique eos? Quae
+        quod doloremque mollitia tempore suscipit modi iure sapiente.
+        Accusantium magnam incidunt animi suscipit provident id eum quis error
+        reiciendis ea. Voluptatibus illum error non eaque nesciunt ab itaque
+        praesentium incidunt, vel velit eveniet, ut laborum. Itaque fuga, fugiat
+        labore sunt, voluptates, quo alias maiores cum consectetur est
+        repellendus qui unde. Odio pariatur similique culpa distinctio
+        architecto itaque quos a deleniti quasi nihil! Earum, quam accusamus
+        fugit vel magni consectetur, obcaecati libero nulla incidunt aut et
+        expedita vero nobis voluptatem at.<br /><br />
+        Aliquam, unde nesciunt deserunt id ratione cupiditate dolor quam et non
+        pariatur? Voluptate quae aspernatur, illum perferendis culpa fugiat
+        eaque quia sint, quaerat, natus sit quos earum! Mollitia, quae
+        adipisci?<br /><br />
+        Ea, magnam tempora cum necessitatibus ex consequatur esse culpa
+        inventore repellat earum quo eum dolores quaerat libero laborum
+        corporis, unde natus voluptatibus eligendi asperiores? Repellat nisi
+        architecto autem odio sit. Nostrum, adipisci ipsa tenetur debitis
+        reiciendis atque delectus, repellendus at, corporis vero sequi
+        consequuntur eveniet! Optio, exercitationem iure aliquid possimus cum
+        facere! Quasi reiciendis repudiandae, excepturi illo autem temporibus
+        iusto?<br /><br />
+        Repellendus deserunt, ducimus maxime sapiente exercitationem dignissimos
+        perspiciatis quod est veniam pariatur voluptate? Cum non aliquam
+        suscipit sed id, laborum eligendi atque pariatur enim rerum. Adipisci
+        nobis sint fugiat aspernatur. Amet consequuntur voluptatem atque,
+        laborum, sit voluptates porro nisi laboriosam beatae natus repellendus
+        earum iste facere reprehenderit provident necessitatibus at vel nesciunt
+        magni pariatur omnis. Praesentium veniam dolorem quos repudiandae.
+      </p>
+      <div class="sub_wrapper">
+        <div id="map" style="height: 600px; width: 600px"></div>
+        <div>
+          <button id="reset-zoom">Reset Zoom</button>
+          <input type="checkbox" id="PM 2.5" name="PM 2.5" checked />
+          <label for="PM 2.5">PM 2.5</label>
+          <input
+            type="checkbox"
+            id="Other Pollutants"
+            name="Other Pollutants"
+          />
+          <label for="Other Pollutants">Other Pollutants</label>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta enim aperiam fugit atque eius dolores mollitia nihil. Dolore asperiores ex unde doloremque soluta, labore itaque voluptas ab atque consequuntur rem!
+      Nobis consequatur iste non delectus quam corporis commodi, iure aliquid vero iusto qui sint. Possimus consequuntur excepturi architecto, magnam praesentium nostrum cumque quia ut vero officiis, magni dolorum odio ullam.<br><br>
+      Saepe corrupti eaque fugiat nihil quisquam mollitia consectetur perferendis sunt molestiae, quas illo soluta error delectus numquam vitae voluptate eos dolores quis aperiam dolorem inventore aliquam porro. Non, labore iste.
+      Quam vitae porro iste cum fugit quod? Aliquam illum vel libero laboriosam officia eligendi vero totam, autem magni veniam! Dolorum culpa iusto, accusamus repellat debitis delectus ab autem quae consequatur.
+      Excepturi rerum iste magni, nesciunt quam delectus natus in, iusto fugit dignissimos esse? Exercitationem dolor aliquam voluptatibus, doloribus debitis totam quibusdam, modi similique, ullam dolorem quia quisquam facere! Adipisci, sunt.<br><br>
+      Adipisci quas ex ipsam unde sed, soluta blanditiis iure voluptatum dolor tempore optio saepe necessitatibus, illo culpa ullam reprehenderit ipsum vitae ratione facilis eius officia officiis mollitia omnis facere? Ab?
+      Cumque distinctio odit quo iste minima eaque ab quasi, laboriosam soluta excepturi fugit harum in, facere itaque enim sed, qui obcaecati quibusdam! Aliquam voluptatem dolorum iure perspiciatis quas quis enim?
+      Perspiciatis molestias minus amet minima sed unde, dolorum nam rem odit eveniet! Alias magnam illo itaque facilis voluptates animi officiis debitis inventore obcaecati perferendis accusamus quis quo id, assumenda minus.<br><br>
+      Similique in sit quis magni voluptas culpa voluptatem nesciunt itaque voluptatibus recusandae. Voluptatum, impedit! Perferendis atque optio dolorem laudantium eum sit esse ducimus, harum a quod molestiae accusamus veniam debitis.<br><br>
+      Ad illum itaque velit adipisci quidem blanditiis suscipit quasi, debitis laborum eos neque quaerat nemo enim iure sint veritatis? Culpa inventore impedit harum eius, odit dolores dignissimos eaque rem saepe.
+      At eligendi quasi in quidem deserunt, dignissimos, fugit architecto quaerat non magni, possimus repellat unde fugiat velit quos molestiae eum. Eveniet minus excepturi ullam itaque illo hic consequuntur sapiente officia?
+      Mollitia ex adipisci, sunt animi ipsum harum, magnam, ut hic architecto iure accusamus molestiae delectus error aliquam id? Molestiae dicta deleniti a aspernatur totam dolor, quisquam reprehenderit tempore fugiat illum!
+      Unde necessitatibus dolorum fuga totam mollitia enim id obcaecati aperiam, est ducimus libero illum sequi quam officiis temporibus rerum. Ipsam incidunt modi veniam ipsum repellat magni tenetur quaerat accusamus cupiditate!
+      Quae delectus consectetur animi numquam distinctio ut, est possimus culpa eum aut! Placeat ducimus ipsum temporibus nihil aliquam dolore et libero, adipisci quam natus sint eveniet rem id dolorum asperiores!<br><br>
+      Labore fugiat voluptatibus odit consequatur vel quas ut maiores corporis adipisci nihil eos ratione provident vero facilis reiciendis amet, placeat pariatur distinctio quae nostrum repellendus saepe? Dolor quo soluta ut.
+      Vitae ad omnis consequatur ipsum ipsam. Reiciendis laboriosam pariatur maiores eligendi, porro corrupti quas temporibus eum molestias aspernatur necessitatibus voluptates amet id delectus architecto quo modi consequatur molestiae ducimus autem.
+      Est cum nemo soluta architecto sapiente, provident ut laudantium, at libero, nesciunt eveniet corporis enim incidunt tempore! In eligendi expedita, itaque nemo culpa commodi cupiditate quaerat. Reprehenderit doloribus veritatis quae!<br><br>
+      Numquam nihil voluptatum vel corporis neque atque corrupti error delectus culpa? Soluta sint culpa asperiores eveniet eum facilis numquam accusamus esse nesciunt incidunt voluptatibus quos repellat voluptatum, autem quasi ipsam.
+      Dolores odit adipisci facere tempora id beatae vero maiores pariatur quasi voluptates, at libero harum natus numquam possimus impedit porro corporis quisquam eaque quas provident tempore non repellendus. Magnam, natus.
+      Commodi dolor quo, nam ex adipisci et nobis alias ducimus incidunt eligendi quasi obcaecati doloribus rerum? Itaque obcaecati reiciendis quaerat culpa quo voluptate eos velit quis, expedita delectus, excepturi voluptates.
+      Facere voluptates ex id perspiciatis culpa neque ad dolor sequi. Ullam assumenda recusandae rem non, vel atque! Animi eveniet tempora sit molestiae aspernatur fugit accusamus eaque quas. Esse, non velit.<br><br>
+      Fugiat, veritatis vitae ducimus impedit aliquid ratione eaque? In repellat, voluptate hic ullam perferendis maxime consequuntur amet dolores eius vitae neque praesentium doloremque id officiis minus optio? Fugit, architecto aliquam?
+      Velit aut, optio amet veniam sequi possimus tempore error odio dolore rerum corporis ea ab. Tenetur maxime dolores repellat! Delectus dignissimos consectetur sapiente impedit deserunt fugiat unde veritatis qui! Delectus.
+      Qui deserunt ducimus culpa animi. Possimus et repudiandae asperiores? Et vero mollitia officia aliquid expedita, tempore porro laboriosam a repellendus fuga dicta alias quae dignissimos, tempora nulla adipisci optio hic.<br><br>
+      Ipsam eos laboriosam itaque ut. Id, enim consequuntur. Esse iste a dolorem tempore soluta praesentium quibusdam minus. Consectetur minus dolorum assumenda delectus ipsa, fuga quae amet quas eum aliquam aliquid!
+      Est, quam et? Illo nobis hic perferendis placeat inventore, accusamus blanditiis expedita mollitia sint! Explicabo veniam illo nemo, quidem ab consectetur debitis, animi mollitia distinctio magni ad sequi exercitationem quibusdam?<br><br>
+      Voluptatem ab, illo error corporis laborum debitis, non nam amet veniam dolore minima, quae a dignissimos praesentium sed voluptate fugiat at dolor suscipit eligendi hic veritatis facilis! Commodi, neque iure.
+      Alias quia ullam repudiandae expedita! Ex veritatis magni alias asperiores quos illo nobis, maxime quae distinctio quam, quisquam eaque voluptate libero quod fugiat accusantium sapiente exercitationem, optio quidem ad dolore?<br><br>
+      Quidem consectetur esse amet aliquam consequuntur corporis ipsa aperiam ipsam incidunt, exercitationem, aut nostrum iure iusto, laboriosam nam beatae! Repellendus tempora repellat vel aut amet blanditiis consequuntur rerum necessitatibus mollitia!
+      Sed aliquid tempora quidem hic accusamus sint, cupiditate fugit quisquam consequuntur distinctio ipsum alias dolor architecto saepe, unde nihil totam, illo perspiciatis sequi fugiat a omnis et sit! Iure, quod.</p>
+    </section>
+    <footer class="footer"></footer>
+    <script src="map.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
