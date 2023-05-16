@@ -1,5 +1,5 @@
 .header {
-  height: 60px;
+  height: 80px;
   background-color: rgba(240, 255, 255, 0.7);
   backdrop-filter: blur(3px);
   /* padding: 0 30px; */
@@ -32,4 +32,39 @@
 .footer {
     height: 60px;
     background-color: lightblue;
+    z-index: 1;
+}
+#go_to_top {
+    /* background-color: yellow; */
+    display: inline;
+    position: fixed;
+    top: 92vh;
+    left: 95vw;
+    z-index: 0;
+}
+#go_to_top > a> img {
+    height: 50px;
+}
+#reset_zoom {
+    background: black;
+    color: white;
+    border-radius: 0.4rem;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border: 1px solid darkslategray;
+    font-size: 12px;
+}
+.map_btns {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+.annotate {
+    position: absolute;
+    background-color: white;
+    border-radius: 0.3rem;
+    border: 1px solid lightgrey;
+    height: 100px;
+    width: 100px;
 }

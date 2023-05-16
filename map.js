@@ -3,7 +3,7 @@ let map = L.map("map", {
   minZoom: 8, // to not zoom out too much
   zoom: 8,
 });
-document.getElementById("reset-zoom").addEventListener("click", function () {
+document.getElementById("reset_zoom").addEventListener("click", function () {
   map.setView([52.35600282867075, -3.832320954338758], 8);
 });
 
@@ -44,7 +44,7 @@ Papa.parse(data, {
         })
           .addTo(map)
           .bindTooltip(
-            `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
+            `<b>${c["Place"]}</b> <br/> Monitored by: <i>${c["Monitoring Authority"]}</i> <br/> Annual mean: <span style="background: lightgray; padding: 2px 4px">${c["Annual Mean"]}</span>`
           );
         pm25Markers.push(marker);
       }

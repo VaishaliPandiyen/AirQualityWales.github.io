@@ -1,45 +1,45 @@
-,Place,Source,PM 2.5,Site type,Latitude,Longitude,Started recording PM 2.5 hourly,Monitoring Authority,Comments
-0,Aston Hill,AQW,No,Rural,52.503850, -3.034178,NA,-,"The monitoring station is within a self-contained, air conditioned housing located in a field on the Welsh-English border. The nearest road is an access-only road for nearby farm buildings and is approximately 400 metres from the monitoring station. The manifold inlet is at approximately 3 metres height. The surrounding area is rural and generally open with the nearest trees approximately 50 metres distance from the station."
-1,Bridgend Park Street,AQW,No,Roadside,51.505534, -3.585733,NA,-,
-2,Caerphilly Blackwood High Street,AQW,No,Roadside,51.666667, -3.194919,NA,-,"High St, Blackwood"
-3,Caerphilly Fochriw,AQW,Yes,Roadside,51.745386, -3.293822,04/05/2012,Local authority,
-4,Caerphilly Islwyn Road Wattsville,AQW,No,Roadside,51.616057, -3.147261,NA,-,
-5,Caerphilly White Street,AQW,No,Roadside,51.573962, -3.218084,NA,-,formerly - Caerphilly Windsor Street
-6,Cardiff Castle Street,AQW,Yes,Roadside,51.481130, -3.181430,20/10/2020,Local authority,
-7,Cardiff Centre,AQW,Yes,Urban centre,51.481780, -3.176250,12/08/2008,DEFRA,"The monitoring station is within a self-contained, air-conditioned housing located within a pedestrianised area. The nearest road is some 200 metres distance with a flow of 27,000 vehicles per day and is subject to periodic congestion during peak periods. The manifold inlet is located approximately 3 metres above ground level. The surrounding area comprises retail and business premises."
-8,Cardiff Newport Road,AQW,No,Roadside,51.490960, -3.152305,NA,-,
-9,Chepstow A48,AQW,Yes,Roadside,51.638094, -2.678731,09/02/2010,DEFRA,Situated on inclined section of A48 to assess road traffic related air quality issues in the locality
-10,Cimla Road / Victoria Gardens,AQW,No,Roadside,51.659617, -3.801693,NA,-,Near to traffic lights at junction of Cimlam Road and Victoria Gardens
-11,Cwmbran Crownbridge,AQW,No,Urban background,51.653819, -3.006370,NA,-,Urban background monitoring station in the grounds of Crownbridge school in the Croesyceiliog area of Cwmbran
-12,Hafod-yr-ynys Roadside,AQW,No,Kerbside,51.680579, -3.133508,NA,-,This is a main road and gateway to Caerphilly CBC.  This is a hill and on the opposite side of the road from Woodside Terrace is a large retaining wall which creates a canyon effect.  There is a signalised junction at the bottom of the hill.  All types of traffic use this road.
-13,Marchlyn Mawr,AQW,No,Remote,53.136152, -4.074791,NA,-,Habitat immediately below the site is mainly unimproved acid grassland and bare rock. Two big diesel generators next inlet used about twice a year. 
-14,Nantgarw Road,AQW,No,Roadside,51.575370, -3.231658,NA,-,"Site situated on a residential terrace, area is mixed residential/commercial.  There is a signalised junction at the end of the road and traffic often backs up the street and idles."
-15,Narberth,AQW,Yes,Rural,51.781784, -4.691462,05/06/2018,DEFRA,"The monitoring station is within a self-contained, air conditoned housing located at the edge of a field adjacent to a hedgerow. A quiet rural road runs to the south of the site at a distance of approximately 90 metres. The nearest road is the B4314 and has a traffic flow of 1000 vehicles a day.The manifold inlet is approximately 3 metres high at a distance of approximately 5 metres from the nearest obstruction. The surrounding area is open and comprises fields with a small amount of light industry at distances of up to 0.5 - 1.8 km distance.
+,Place,Source,PM 2.5,Site type,Latitude,Longitude,Started recording PM 2.5 hourly,Monitoring Authority,Annual Mean,Comments
+0,Aston Hill,AQW,No,Rural,52.503850, -3.034178,NA,-,-,"The monitoring station is within a self-contained, air conditioned housing located in a field on the Welsh-English border. The nearest road is an access-only road for nearby farm buildings and is approximately 400 metres from the monitoring station. The manifold inlet is at approximately 3 metres height. The surrounding area is rural and generally open with the nearest trees approximately 50 metres distance from the station."
+1,Bridgend Park Street,AQW,No,Roadside,51.505534, -3.585733,NA,-,-,
+2,Caerphilly Blackwood High Street,AQW,No,Roadside,51.666667, -3.194919,NA,-,-,"High St, Blackwood"
+3,Caerphilly Fochriw,AQW,Yes,Roadside,51.745386, -3.293822,04/05/2012,Local authority,6.96,
+4,Caerphilly Islwyn Road Wattsville,AQW,No,Roadside,51.616057, -3.147261,NA,-,-,
+5,Caerphilly White Street,AQW,No,Roadside,51.573962, -3.218084,NA,-,-,formerly - Caerphilly Windsor Street
+6,Cardiff Castle Street,AQW,Yes,Roadside,51.481130, -3.181430,20/10/2020,Local authority,9.83,
+7,Cardiff Centre,AQW,Yes,Urban centre,51.481780, -3.176250,12/08/2008,DEFRA,10.55,"The monitoring station is within a self-contained, air-conditioned housing located within a pedestrianised area. The nearest road is some 200 metres distance with a flow of 27,000 vehicles per day and is subject to periodic congestion during peak periods. The manifold inlet is located approximately 3 metres above ground level. The surrounding area comprises retail and business premises."
+8,Cardiff Newport Road,AQW,No,Roadside,51.490960, -3.152305,NA,-,-,
+9,Chepstow A48,AQW,Yes,Roadside,51.638094, -2.678731,09/02/2010,DEFRA,9.21,Situated on inclined section of A48 to assess road traffic related air quality issues in the locality
+10,Cimla Road / Victoria Gardens,AQW,No,Roadside,51.659617, -3.801693,NA,-,-,Near to traffic lights at junction of Cimlam Road and Victoria Gardens
+11,Cwmbran Crownbridge,AQW,No,Urban background,51.653819, -3.006370,NA,-,-,Urban background monitoring station in the grounds of Crownbridge school in the Croesyceiliog area of Cwmbran
+12,Hafod-yr-ynys Roadside,AQW,No,Kerbside,51.680579, -3.133508,NA,-,-,This is a main road and gateway to Caerphilly CBC.  This is a hill and on the opposite side of the road from Woodside Terrace is a large retaining wall which creates a canyon effect.  There is a signalised junction at the bottom of the hill.  All types of traffic use this road.
+13,Marchlyn Mawr,AQW,No,Remote,53.136152, -4.074791,NA,-,-,Habitat immediately below the site is mainly unimproved acid grassland and bare rock. Two big diesel generators next inlet used about twice a year. 
+14,Nantgarw Road,AQW,No,Roadside,51.575370, -3.231658,NA,-,-,"Site situated on a residential terrace, area is mixed residential/commercial.  There is a signalised junction at the end of the road and traffic often backs up the street and idles."
+15,Narberth,AQW,Yes,Rural,51.781784, -4.691462,05/06/2018,DEFRA,6.38,"The monitoring station is within a self-contained, air conditoned housing located at the edge of a field adjacent to a hedgerow. A quiet rural road runs to the south of the site at a distance of approximately 90 metres. The nearest road is the B4314 and has a traffic flow of 1000 vehicles a day.The manifold inlet is approximately 3 metres high at a distance of approximately 5 metres from the nearest obstruction. The surrounding area is open and comprises fields with a small amount of light industry at distances of up to 0.5 - 1.8 km distance.
 
 "
-16,Newport M4 Junction 25,AQW,No,Roadside,51.601262, -2.973273,NA,-,"Site located on highways owned land, between Badminton Road and M4.  Site is 5.5m from kerbside, approx 7.5m above road.  Area to the north of the site is residential."
-17,Newport St Julians Comp School,AQW,Yes,Urban background,51.601203, -2.977281,12/12/2008,DEFRA,"This site is located within the grounds of St. Julian's Comprehensive school. The M4 motorway is located 60m to the north-east.
+16,Newport M4 Junction 25,AQW,No,Roadside,51.601262, -2.973273,NA,-,-,"Site located on highways owned land, between Badminton Road and M4.  Site is 5.5m from kerbside, approx 7.5m above road.  Area to the north of the site is residential."
+17,Newport St Julians Comp School,AQW,Yes,Urban background,51.601203, -2.977281,12/12/2008,DEFRA,7.43,"This site is located within the grounds of St. Julian's Comprehensive school. The M4 motorway is located 60m to the north-east.
 
 was 332499,189569"
-18,Port Talbot Dyffryn School,AQW,Yes,Urban background,51.572433, -3.751092,20/05/2022,Unknown,"The monitoring station is within a self-contained, air-conditioned housing."
-19,Port Talbot Little Warren,AQW,Yes,Urban industrial,51.584930, -3.801069,26/05/2022,Unknown,Residential and playing fields north west of Tata steel works
-20,Port Talbot Margam,AQW,Yes,Urban industrial,51.583950, -3.770822,23/04/2008,DEFRA,"The monitoring station is within a self-contained, air-conditioned housing."
-21,Port Talbot Prince Street 2,AQW,Yes,Urban industrial,51.579656, -3.766465,07/03/2014,Local authority,"Port Talbot Prince Street 2, Dwr Cymru Pumping Station, Prince Street, Port Talbot,SA13 1NB"
-22,Port Talbot Twll-yn-y-Wal Park,AQW,No,Roadside,51.576676, -3.759005,NA,-,"Twll-yn-y-Wal Park, Margam Road, Port Talbot"
-23,Rhondda Mountain Ash,AQW,No,Roadside,51.684393, -3.378816,NA,-,Roadside location within an urban area along the A4059.
-24,Rhondda Pontypridd Gelliwastad Rd,AQW,No,Roadside,51.605074, -3.340157,NA,-,
-25,Rhondda-Cynon-Taf Broadway,AQW,No,Roadside,51.597845, -3.331923,NA,-,
-26,Swansea Cwm Level Park,AQW,No,Urban background,51.645733, -3.939392,NA,-,The site is located within the park itself and is within the compound that houses a 30m meteorological mast. The site is to the southern edge of Cwm Level Park and is bounded by grassland that forms football and cricket pitches.
-27,Swansea Hafod DOAS,AQW,No,Roadside,51.632927, -3.938540,NA,-,"Sited within a congested section of Neath Road. Measurements are undertaken utilising Differential Optical Absorption Spectroscopy (DOAS) along an open path of 250m within the section of Neath Road from its junction with Maliphant Street up to a point near the junction with Bowen Street. A xenon lamp is shone from the transmitter which is located on the front wall of a property on Maliphant Street/Neath Road, with the receiver being located at a commercial premises 250 metres away. The receiver focuses and transmits the light via fibre optic cable into a spectra analyser. Concentrations are reported integrated over the path length and are therefore not directly comparable with fixed point measurements."
-28,Swansea Morfa Road NOX,AQW,No,Roadside,51.626379, -3.938637,NA,-,
-29,Swansea Morriston Roadside,AQW,Yes,Roadside,51.662122, -3.921301,15/01/2016,Local authority,The Morriston Groundhog has been operational since September 2000 and is located adjacent to the southbound slip road to the busy A4067 dual carriageway at Morriston Underpass. The Hafod AQMA boundary is approximately one mile south of this location.
-30,Swansea Port Tennant Roadside,AQW,Yes,Roadside,51.621638, -3.927318,20/12/2018,Local authority,
-31,Swansea Roadside,AQW,Yes,Roadside,51.632696, -3.947374,20/09/2006,DEFRA,The Swansea AURN (Automatic Urban and Rural Network) has been affiliated into the UK National Network since 1994 and has been operational ever since. The site was relocated from Castle Gardens in 1995 to Princess Way in the city centre. This site has itself now been decommissioned during August 2006 and relocated to its present location along the A483 Carmarthen road due to redevelopment works within the city centre. The site now has a classification of Roadside. The site picture shows a view of the Swansea AURN looking north towards Cwm Level roundabout. The main city centre shopping area is located approximately a mile and a half to the south this location.
-32,Swansea St Thomas DOAS,AQW,No,Roadside,51.625711, -3.934461,NA,-,"Transmitter - Junction of Kilvey Terrace and Penterguinea Road.
+18,Port Talbot Dyffryn School,AQW,Yes,Urban background,51.572433, -3.751092,20/05/2022,Unknown,6,"The monitoring station is within a self-contained, air-conditioned housing."
+19,Port Talbot Little Warren,AQW,Yes,Urban industrial,51.584930, -3.801069,26/05/2022,Unknown,7,Residential and playing fields north west of Tata steel works
+20,Port Talbot Margam,AQW,Yes,Urban industrial,51.583950, -3.770822,23/04/2008,DEFRA,10.12,"The monitoring station is within a self-contained, air-conditioned housing."
+21,Port Talbot Prince Street 2,AQW,Yes,Urban industrial,51.579656, -3.766465,07/03/2014,Local authority,9.96,"Port Talbot Prince Street 2, Dwr Cymru Pumping Station, Prince Street, Port Talbot,SA13 1NB"
+22,Port Talbot Twll-yn-y-Wal Park,AQW,No,Roadside,51.576676, -3.759005,NA,-,-,"Twll-yn-y-Wal Park, Margam Road, Port Talbot"
+23,Rhondda Mountain Ash,AQW,No,Roadside,51.684393, -3.378816,NA,-,-,Roadside location within an urban area along the A4059.
+24,Rhondda Pontypridd Gelliwastad Rd,AQW,No,Roadside,51.605074, -3.340157,NA,-,-,
+25,Rhondda-Cynon-Taf Broadway,AQW,No,Roadside,51.597845, -3.331923,NA,-,-,
+26,Swansea Cwm Level Park,AQW,No,Urban background,51.645733, -3.939392,NA,-,-,The site is located within the park itself and is within the compound that houses a 30m meteorological mast. The site is to the southern edge of Cwm Level Park and is bounded by grassland that forms football and cricket pitches.
+27,Swansea Hafod DOAS,AQW,No,Roadside,51.632927, -3.938540,NA,-,-,"Sited within a congested section of Neath Road. Measurements are undertaken utilising Differential Optical Absorption Spectroscopy (DOAS) along an open path of 250m within the section of Neath Road from its junction with Maliphant Street up to a point near the junction with Bowen Street. A xenon lamp is shone from the transmitter which is located on the front wall of a property on Maliphant Street/Neath Road, with the receiver being located at a commercial premises 250 metres away. The receiver focuses and transmits the light via fibre optic cable into a spectra analyser. Concentrations are reported integrated over the path length and are therefore not directly comparable with fixed point measurements."
+28,Swansea Morfa Road NOX,AQW,No,Roadside,51.626379, -3.938637,NA,-,-,
+29,Swansea Morriston Roadside,AQW,Yes,Roadside,51.662122, -3.921301,15/01/2016,Local authority,9.44,The Morriston Groundhog has been operational since September 2000 and is located adjacent to the southbound slip road to the busy A4067 dual carriageway at Morriston Underpass. The Hafod AQMA boundary is approximately one mile south of this location.
+30,Swansea Port Tennant Roadside,AQW,Yes,Roadside,51.621638, -3.927318,20/12/2018,Local authority,11.27,
+31,Swansea Roadside,AQW,Yes,Roadside,51.632696, -3.947374,20/09/2006,DEFRA,10.32,The Swansea AURN (Automatic Urban and Rural Network) has been affiliated into the UK National Network since 1994 and has been operational ever since. The site was relocated from Castle Gardens in 1995 to Princess Way in the city centre. This site has itself now been decommissioned during August 2006 and relocated to its present location along the A483 Carmarthen road due to redevelopment works within the city centre. The site now has a classification of Roadside. The site picture shows a view of the Swansea AURN looking north towards Cwm Level roundabout. The main city centre shopping area is located approximately a mile and a half to the south this location.
+32,Swansea St Thomas DOAS,AQW,No,Roadside,51.625711, -3.934461,NA,-,-,"Transmitter - Junction of Kilvey Terrace and Penterguinea Road.
 
 Receiver - Adjacent to Ivy Bush Court, Pentreguinea Road, St.Thomas"
-33,Swansea Station Court High Street,AQW,No,Roadside,51.625921, -3.941502,NA,-,Outside Flats. Bus Stop immediately outside site. Close to congestion caused by signal controlled lights and mini roundabouts. Swansea Railway station opposite.
-34,Twynyrodyn,AQW,Yes,Urban industrial,51.744444, -3.365833,01/01/2005,Local authority,Near an opencast mine
-35,Wrexham,AQW,Yes,Roadside,53.042220, -3.002778,01/10/2018,DEFRA,Located just beyond perimeter of school grounds. Predominantly residential area approximately 5m from Victoria Road. 
-36,Wrexham Chirk,AQW,Yes,Urban industrial,52.937420, -3.053129,22/07/2020,Local authority,
-37,Wrexham Chirk Community Hospital,AQW,Yes,Urban background,52.943644, -3.053116,29/11/2021,Unknown,
+33,Swansea Station Court High Street,AQW,No,Roadside,51.625921, -3.941502,NA,-,-,Outside Flats. Bus Stop immediately outside site. Close to congestion caused by signal controlled lights and mini roundabouts. Swansea Railway station opposite.
+34,Twynyrodyn,AQW,Yes,Urban industrial,51.744444, -3.365833,01/01/2005,Local authority,No Data,Near an opencast mine
+35,Wrexham,AQW,Yes,Roadside,53.042220, -3.002778,01/10/2018,DEFRA,7.13,Located just beyond perimeter of school grounds. Predominantly residential area approximately 5m from Victoria Road. 
+36,Wrexham Chirk,AQW,Yes,Urban industrial,52.937420, -3.053129,22/07/2020,Local authority,4.03,
+37,Wrexham Chirk Community Hospital,AQW,Yes,Urban background,52.943644, -3.053116,29/11/2021,Unknown,5,
