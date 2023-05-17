@@ -1,162 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Air Quality in Wales</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-      crossorigin=""
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-  </head>
-  <body>
-    <header
-      class="header sticky-top navbar navbar-light"
-      style="display: flex; justify-content: space-around; align-items: center"
-    >
-      <!-- <p id="date_today"></p> -->
-      <h1 style="font-family: merriweather; font-size: x-large">
-        CARDIFF NEWS
-      </h1>
-      <!-- <input type="search"  style="height: 25px"/> -->
-    </header>
-    <!-- <nav class="nav"></nav> -->
-    <div id="go_to_top">
-      <a href="#top">
-        <img src="Images/arrowhead-up.png" />
-      </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air Quality in Wales</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body>
+  <header class="header sticky-top navbar navbar-light"
+    style="display: flex; justify-content: space-around; align-items: center">
+    <!-- <p id="date_today"></p> -->
+    <h1 style="font-family: merriweather; font-size: x-large">
+      CARDIFF NEWS
+    </h1>
+    <!-- <input type="search"  style="height: 25px"/> -->
+  </header>
+  <!-- <nav class="nav"></nav> -->
+  <div id="go_to_top">
+    <a href="#top">
+      <img src="Images/arrowhead-up.png" />
+    </a>
+  </div>
+  <section id="top" class="blog">
+    <h1 style="font-size: 4rem; margin-top: 50px">
+      Whatever our headline is
+    </h1>
+    <i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+      maiores amet debitis dolore architecto rerum, eius autem officia porro,
+      nisi sequi pariatur fuga dolorum libero esse mollitia id obcaecati
+      veniam?</i>
+    <b>By Ahhyeon Cho, Jeffrey Halley and Vaishali Pandiyen</b>
+    <p style="margin-bottom: 20px">18 May, 2023</p>
+    <hr style="margin-bottom: 30px" />
+    <p>People in Swansea and Cardiff are still breathing air with the most tiny particle pollution in it, according to
+      analysis of PM2.5 levels in 2022.</p>
+    <p>It also found that the months of March and January had particularly high levels of PM2.5 last year.</p>
+    <p>In South Wales PM 2.5 levels are still more than twice as high as the World Health Organization’s (WHO)
+      guidelines, although they are within the limits allowed by the UK and Welsh government.</p>
+    <p>PM 2.5 is considered dangerous because it gets into the entire body and affects blood and respiratory systems.
+      The WHO considers it a carcinogen.</p>
+    <p>The worst PM2.5 average reading in south Wales last year was measured in Cardiff, where the hourly average over
+      the year was 10.55 micrograms of PM2.5 per cubic metre [AURN].</p>
+    <p>In Swansea one location measured an average of 10.37 micrograms of PM2.5 per cubic metre [AURN Swansea roadside].
+      But ANOTHER [locally managed] Swansea site recorded an average of 11.27 micrograms of PM2.5 per cubic metre. Other
+      areas that are monitored include Port Talbot and Newport and had less than 10micrograms etc.</p>
+    <p>The WHO recommend keeping annual PM 2.5 levels at 5 µg/m3 and it say this should be reflected in legislation and
+      policy.</p>
+    <p>Wales has maintained a 20µg/m3 per year target in line with UK and EU regulations. However, in March last year
+      the UK government suggested a new target for 2040, of 10µg/m3, a target that Wales does not yet meet.</p>
+    <p>In Cardiff, the annual PM 2.5 particulate matter levels measured every hour were low as 8.52 in 2021 during the
+      Covid-19 lockdown.[AURN] Prior to coronavirus pandemic, Cardiff's PM 2.5 levels were 10.09 in 2018 and 11.24 in
+      2019.[AURN]</p>
+    <p>When analysed by month, South Wales has higher concentrations of PM 2.5 pollution in the spring and winter months
+      and lower concentrations in the summer and early autumn.</p>
+    <p>While this varies slightly across the region, broadly speaking PM 2.5 levels are highest in March, December and
+      January, and lowest in July and September.</p>
+
+    <div style="padding: 20px 0">
+      <iframe title="Average PM2.5 levels by month in South Wales(2022): locally-managed monitors " aria-label="Table"
+        id="datawrapper-chart-WVBBS" src="https://datawrapper.dwcdn.net/WVBBS/4/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="531" data-external="1"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+      </script>
+      <br/> <br/> <br/> <br/><iframe title="Average PM2.5 levels by month in South Wales(2022) : Automatic monitors (AURN)"
+        aria-label="Table" id="datawrapper-chart-qEdlS" src="https://datawrapper.dwcdn.net/qEdlS/2/" scrolling="no"
+        frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="531"
+        data-external="1"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+      </script>
     </div>
-    <section id="top" class="blog">
-      <h1 style="font-size: 4rem; margin-top: 50px">
-        Whatever our headline is
-      </h1>
-      <i
-        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
-        maiores amet debitis dolore architecto rerum, eius autem officia porro,
-        nisi sequi pariatur fuga dolorum libero esse mollitia id obcaecati
-        veniam?</i
-      >
-      <b>By Ahhyeon Cho, Jeffrey Halley and Vaishali Pandiyen</b>
-      <p style="margin-bottom: 20px">18 May, 2023</p>
-      <hr style="margin-bottom: 30px" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet
-        officia accusamus. Fuga deleniti ducimus, sint porro amet ipsam soluta
-        hic nihil facilis eveniet quas perspiciatis non quidem beatae natus?<br /><br />
-        Perferendis eveniet voluptas possimus dolor placeat voluptates ad
-        consequuntur rerum dolores explicabo consectetur nihil, delectus magni,
-        officiis dolore tempore minima fugiat exercitationem eligendi voluptatum
-        aspernatur eius! Rerum minus explicabo dolor.<br /><br />
-        Enim itaque sed commodi ducimus aliquid ab, officia sequi cum veniam
-        iusto ullam neque earum quas quis autem similique, nam eaque doloribus
-        necessitatibus dolore provident minima odit fuga! Itaque, cupiditate.<br /><br />
-        Culpa, impedit, rem quae illo magnam excepturi cum aliquam mollitia
-        reiciendis tempore, dolore omnis voluptatum? Et porro reiciendis
-        sapiente voluptatem esse quae cumque vel, dolore adipisci vero repellat
-        iste quod.<br /><br />
-        Amet, voluptas, fuga nesciunt rem eligendi quisquam est earum sint
-        corrupti provident modi dolores dolorum. Mollitia ratione aspernatur
-        odio. Voluptate obcaecati in atque, ratione quo consequuntur inventore
-        ad iure saepe.<br /><br />
-        Ipsam quia explicabo a labore, ea architecto eius praesentium natus sit
-        molestias eaque perferendis nesciunt fugit deleniti at consequuntur?
-        Consectetur sequi obcaecati explicabo aliquam fugiat nam cumque harum
-        corporis? Possimus. Magni adipisci, cumque dolorem sapiente dignissimos
-        commodi illo quidem earum velit vero, quaerat nisi ab reprehenderit
-        dolorum quos. Maxime, vitae iure magni eaque obcaecati saepe ad
-        explicabo asperiores? Illum, voluptates.<br /><br />
-        Fuga quibusdam voluptates non libero consequuntur incidunt laboriosam
-        soluta inventore quidem repudiandae ex officia id, minima eum excepturi,
-        adipisci similique dolorem recusandae explicabo, numquam itaque. Dolore
-        obcaecati at ratione debitis! Temporibus vero provident amet consectetur
-        expedita ratione, obcaecati minima consequatur optio, quidem quasi,
-        praesentium officia asperiores corporis odio inventore ea omnis neque ut
-        esse unde incidunt ab. Ullam, numquam quibusdam.<br /><br />
-        Natus nisi ad aut commodi provident deserunt doloribus eveniet facere
-        enim minima, vitae, eius laudantium a eos beatae. Sed officia totam
-        minus tempore maiores accusamus ex nihil necessitatibus hic nobis.
-        Architecto ex nisi repudiandae facere dolores laborum? Tempora nisi
-        aspernatur reiciendis nulla iste omnis architecto. Ex, impedit minima
-        enim autem, nostrum harum magnam perspiciatis quas nisi mollitia, iure
-        consectetur dolores? Maiores nemo nulla saepe aut porro velit, quam
-        minima fuga deserunt, optio alias! Labore amet soluta exercitationem
-        incidunt? Labore quae in iure vitae esse debitis minima molestiae
-        repellat! Quos, recusandae.<br /><br />
-        Enim magnam expedita illum, ducimus culpa libero similique eos? Quae
-        quod doloremque mollitia tempore suscipit modi iure sapiente.
-        Accusantium magnam incidunt animi suscipit provident id eum quis error
-        reiciendis ea. Voluptatibus illum error non eaque nesciunt ab itaque
-        praesentium incidunt, vel velit eveniet, ut laborum. Itaque fuga, fugiat
-        labore sunt, voluptates, quo alias maiores cum consectetur est
-        repellendus qui unde. Odio pariatur similique culpa distinctio
-        architecto itaque quos a deleniti quasi nihil! Earum, quam accusamus
-        fugit vel magni consectetur, obcaecati libero nulla incidunt aut et
-        expedita vero nobis voluptatem at.<br /><br />
-        Aliquam, unde nesciunt deserunt id ratione cupiditate dolor quam et non
-        pariatur? Voluptate quae aspernatur, illum perferendis culpa fugiat
-        eaque quia sint, quaerat, natus sit quos earum! Mollitia, quae
-        adipisci?<br /><br />
-        Ea, magnam tempora cum necessitatibus ex consequatur esse culpa
-        inventore repellat earum quo eum dolores quaerat libero laborum
-        corporis, unde natus voluptatibus eligendi asperiores? Repellat nisi
-        architecto autem odio sit. Nostrum, adipisci ipsa tenetur debitis
-        reiciendis atque delectus, repellendus at, corporis vero sequi
-        consequuntur eveniet! Optio, exercitationem iure aliquid possimus cum
-        facere! Quasi reiciendis repudiandae, excepturi illo autem temporibus
-        iusto?<br /><br />
-        Repellendus deserunt, ducimus maxime sapiente exercitationem dignissimos
-        perspiciatis quod est veniam pariatur voluptate? Cum non aliquam
-        suscipit sed id, laborum eligendi atque pariatur enim rerum. Adipisci
-        nobis sint fugiat aspernatur. Amet consequuntur voluptatem atque,
-        laborum, sit voluptates porro nisi laboriosam beatae natus repellendus
-        earum iste facere reprehenderit provident necessitatibus at vel nesciunt
-        magni pariatur omnis. Praesentium veniam dolorem quos repudiandae.
-      </p>
+    <p>Professor Frank Kelly, who leads an Environmental Research Group at Imperial College London, points to the
+      spraying of pesticides and fertilisers as a reason for the increase in fine particulate matter in spring. “At this
+      time there is a lot of secondary PM2.5 being generated by action of our continental neighbours like France and the
+      Netherlands as farmers are spraying their field with pesticides and fertilizers at this time”.</p>
+    <p>He says that these particles "end up as precursors for secondary PM 2.5 which is blown into the UK."</p>
+    <p>Although south Wales has cleaner air than the cities of India or China, the WHO warns of a clear link between air
+      pollution and deaths caused by circulatory, respiratory and lung cancer deaths. The figures for South Wales remain
+      nearly twice as high as the WHO's safe levels.</p>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+            style="background: rgba(211, 211, 211, 0.4);">
+            What is PM 2.5 and why should we be watching for it?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body" style="border: 1px solid lightgrey">
+            <p>
+              PM 2.5 is fine inhalable particle with diameters that are generally 2.5 micrometers and smaller.
+            </p>
+            <p>
+              In fact, it's hard for us to understand how small 2.5 micrometres is with numbers and symbols.
+            </p>
+            <p>
+              Let's imagine a single hair from your hair.
+            </p>
+            <p>
+              We'll start by plucking a strand of hair - you can use your own, or borrow one from a friend with a full
+              head of hair.
+            </p>
+            <p>
+              The average human hair is about 70 micrometres in diameter.
+            </p>
+            <p>
+              If I take the 1 hair I just plucked and split it back into 30 strands, I can estimate 1 PM 2.5 particle.
+            </p>
+            <p>
+              This size is particularly dangerous because such miniscule particles can penetrate human lungs with ease
+              and the tiniest particles can even enter the bloodstream.
+            </p>
+            <p>
+              Let's imagine one more thing. Please draw a cubic box in your head.
+            </p>
+            <p>
+              People put a single PM 2.5 particle into a cubic metre box that is one metre across, one metre long and
+              one metre high, and express it again in numbers and symbols (µg/m3 ).
+            </p>
+            <p>
+              µg/m3 is the symbol we use to measure the concentration of an air pollutant. It is a measure of
+              concentration in terms of mass per unit volume.
+            </p>
+            <p>
+              1 µg/m3 means that there is one particle of PM 2.5 in a box of air that is 1 m long, 1 m wide, and 1 m
+              high.
+            </p>
+            <p>
+              10 µg/m3 for PM 2.5 means that 10 particles of PM 2.5 size or smaller were measured inside an air box of
+              the same size.
+            </p>
+            <p>
+              Particles are likely to enter through the respiratory tract and bloodstream of citizens who enjoy outdoor
+              activities or ordinary people who open windows and ventilate indoors.
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="sub_wrapper">
         <div id="map" style="height: 600px; width: 600px"></div>
         <div class="annotate"></div>
         <p style="font-size: 10px; margin-bottom: 10px">
           Source:
-          <a
-            href="https://airquality.gov.wales/air-pollution/monitoring-site-summary"
-            >Air Quality Wales</a
-          >
+          <a href="https://airquality.gov.wales/air-pollution/monitoring-site-summary">Air Quality Wales</a>
           | Source for Annual Means:
-          <a href="https://uk-air.defra.gov.uk/interactive-map?network=aurn"
-            >DEFRA</a
-          >
+          <a href="https://uk-air.defra.gov.uk/interactive-map?network=aurn">DEFRA</a>
           and
-          <a
-            href="https://airquality.gov.wales/air-pollution/monitoring-site-summary"
-            >AQW</a
-          >
+          <a href="https://airquality.gov.wales/air-pollution/monitoring-site-summary">AQW</a>
         </p>
         <div class="map_btns">
           <button id="reset_zoom">Reset Zoom</button>
           <div class="checkbox">
             <input type="checkbox" id="PM 2.5" name="PM 2.5" checked />
             <label for="PM 2.5">PM 2.5</label>
-            <input
-              type="checkbox"
-              id="Other Pollutants"
-              name="Other Pollutants"
-            />
+            <input type="checkbox" id="Other Pollutants" name="Other Pollutants" />
             <label for="Other Pollutants">Other Pollutants</label>
           </div>
         </div>
@@ -251,8 +259,11 @@
         <div style="margin: 30px 0">
           <h4 style="text-align: center">PM 2.5 Emissions in Wales 2020</h4>
           <img src="Images/img1.png" style="width: 60vw" />
-          <i style="position: relative; left: 50px; padding: 2px 5px; background: rgba(211, 211, 211, 0.4); display: inline-block; margin: 10px 0;"
-            >Source: National Atmospheric Emissions Inventory
+          <i style="font-size: small">Source:
+            <a
+              href="https://uk-air.defra.gov.uk/assets/documents/reports/cat09/2210251052_DA_Air_Pollutant_Inventories_2005-2020_FINAL_v1.2.pdf">
+              National Atmospheric Emissions Inventory
+            </a>
           </i>
         </div>
         <p>
@@ -271,25 +282,30 @@
           sources, such as gas and electricity.”
         </p>
         <p>We tend to agree.</p>
-        <div style="margin: 30px 0; display: flex; justify-content: center">
+        <div style="margin: 30px 0; display: flex; flex-direction: column; justify-content: center">
           <img src="Images/img2.png" style="width: 30vw; margin: 0 auto" />
+          <i style="font-size: small; text-align: center;">Source:
+            <a
+              href="https://uk-air.defra.gov.uk/assets/documents/reports/cat09/2210251052_DA_Air_Pollutant_Inventories_2005-2020_FINAL_v1.2.pdf">
+              National Atmospheric Emissions Inventory
+            </a>
+          </i>
         </div>
       </section>
-    </section>
-    <footer class="footer" style="display: flex; justify-content: center; align-items: center;">
-      <i>Cardiff University MCT542 2022-23</i>
-    </footer>
-    <script src="map.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      let date = new Date();
-      let dateHolder = document.getElementById("date_today");
-      dateHolder.innerHTML =
-        date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-    </script>
-  </body>
+  </section>
+  <footer class="footer" style="display: flex; justify-content: center; align-items: center">
+    <i>Cardiff University MCT542 2022-23</i>
+  </footer>
+  <script src="map.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    let date = new Date();
+    let dateHolder = document.getElementById("date_today");
+    dateHolder.innerHTML =
+      date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+  </script>
+</body>
+
 </html>
