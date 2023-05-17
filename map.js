@@ -36,41 +36,30 @@ Papa.parse(data, {
   header: true,
   complete: function (results) {
     results.data.pop();
-
-    for (let c of results.data) {
-      if (c["PM 2.5"] == "Yes") {
-        const marker = L.marker([c["Latitude"], c["Longitude"]], {
-          icon: pm25_icon,
-        })
-          .addTo(map)
-          .bindTooltip(
-            `<b>${c["Place"]}</b> <br/> Monitored by: <i>${c["Monitoring Authority"]}</i> <br/> Annual mean: <span style="background: lightgray; padding: 2px 4px">${c["Annual Mean"]}</span>`
-          );
-        pm25Markers.push(marker);
+    
+    let mapMarkers = () => {
+      if (pm25Checkbox.checked) {
+        console.log("Showing PM 2.5 monitors");
+        for (let c of results.data) {
+          if (c["PM 2.5"] == "Yes") {
+            const marker = L.marker([c["Latitude"], c["Longitude"]], {
+              icon: pm25_icon,
+            }).bindTooltip(
+              `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
+            );
+            pm25Markers.push(marker);
+          }
+        }
+        pm25_layer = L.layerGroup(pm25Markers);
+        pm25_layer.addTo(map);
+      } else {
+        console.log("Hiding PM 2.5 monitors");
+        pm25_layer.removeFrom(map);
+        pm25Markers.length = 0;
       }
-    }
-
-    //   pm25Checkbox.addEventListener("change", () => {
-    //     if (pm25Checkbox.checked) {
-    //       console.log("Showing PM 2.5 monitors");
-    //       for (let c of results.data) {
-    //         if (c["PM 2.5"] == "Yes") {
-    //           const marker = L.marker([c["Latitude"], c["Longitude"]], {
-    //             icon: pm25_icon,
-    //           }).bindTooltip(
-    //             `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
-    //           );
-    //           pm25Markers.push(marker);
-    //         }
-    //       }
-    //       pm25_layer = L.layerGroup(pm25Markers);
-    //       pm25_layer.addTo(map);
-    //     } else {
-    //       console.log("Hiding PM 2.5 monitors");
-    //       pm25_layer.removeFrom(map);
-    //       pm25Markers.length = 0;
-    //     }
-    //   });
+    };
+    pm25Checkbox.addEventListener("change", mapMarkers);
+    mapMarkers();
     otherPollutantsCheckbox.addEventListener("change", () => {
       if (otherPollutantsCheckbox.checked) {
         for (let c of results.data) {
@@ -90,31 +79,4 @@ Papa.parse(data, {
       }
     });
   },
-});
-
-
-pm25_layer = L.layerGroup(pm25Markers);
-pm25_layer.addTo(map);
-
-pm25Checkbox.addEventListener("change", () => {
-  if (pm25Checkbox.checked) {
-    console.log("Showing PM 2.5 monitors");
-    //   for (let c of results.data) {
-    //     if (c["PM 2.5"] == "Yes") {
-    //       const marker = L.marker([c["Latitude"], c["Longitude"]], {
-    //         icon: pm25_icon,
-    //       }).bindTooltip(
-    //         `${c["Place"]} <br> Monitored by: ${c["Monitoring Authority"]}`
-    //       );
-    //       pm25Markers.push(marker);
-    //     }
-    //   }
-    //   pm25_layer = L.layerGroup(pm25Markers);
-    pm25_layer.addTo(map);
-  } else {
-    console.log("Hiding PM 2.5 monitors");
-    pm25_layer.removeFrom(map);
-    pm25Markers.length = 0;
-    //   console.log(pm25_layer)
-  }
 });

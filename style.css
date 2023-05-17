@@ -1,26 +1,30 @@
 .header {
   height: 80px;
-  background-color: rgba(240, 255, 255, 0.7);
-  backdrop-filter: blur(3px);
+  background-color: rgba(255, 160, 122, 0.1);
+  backdrop-filter: blur(100px);
   /* padding: 0 30px; */
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(173, 216, 230, 0.514);
+  border-bottom: 1px solid rgba(255, 160, 122, 0.3);
   width: 100%;
 
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
 }
-.article {
+.nav {
+    height: 20px;
+    background: rgba(255, 160, 122, 0.3);
+}
+.blog {
     width: 60%;
     margin: 30px auto;
     text-align: justify;
 }
-.article>h1, .article>h4, .article>i {
+.blog>h1, .blog>i {
     display: block;
     text-align: center;
 }
-.article>i {
+.blog>i {
     margin-bottom: 30px;
 }
 .sub_wrapper {
@@ -31,7 +35,7 @@
 }
 .footer {
     height: 60px;
-    background-color: lightblue;
+    background-color: lightsalmon;
     z-index: 1;
 }
 #go_to_top {
