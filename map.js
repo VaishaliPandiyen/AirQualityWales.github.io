@@ -24,7 +24,7 @@ let others_icon = L.icon({
   iconSize: [38, 55],
 });
 
-const pm25Checkbox = document.getElementById("PM 2.5");
+const pm25Checkbox = document.getElementById("PM2.5");
 const otherPollutantsCheckbox = document.getElementById("Other Pollutants");
 const pm25Markers = [];
 const otherPollutantsMarkers = [];
