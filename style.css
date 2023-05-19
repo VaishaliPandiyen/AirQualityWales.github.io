@@ -21,7 +21,7 @@
   text-align: justify;
 }
 .blog > h1,
-.blog > i {
+.blog > p {
   display: block;
   text-align: center;
 }
