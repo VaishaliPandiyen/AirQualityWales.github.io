@@ -12,63 +12,71 @@
   align-items: center; */
 }
 .nav {
-    height: 20px;
-    background: rgba(255, 160, 122, 0.3);
+  height: 20px;
+  background: rgba(255, 160, 122, 0.3);
 }
 .blog {
-    width: 60%;
-    margin: 30px auto;
-    text-align: justify;
+  width: 60%;
+  margin: 30px auto;
+  text-align: justify;
 }
-.blog>h1, .blog>i {
-    display: block;
-    text-align: center;
+.blog > h1,
+.blog > i {
+  display: block;
+  text-align: center;
 }
-.blog>i {
-    margin-bottom: 30px;
+.blog > i {
+  margin-bottom: 30px;
 }
 .sub_wrapper {
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;align-items: center;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .footer {
-    height: 60px;
-    background-color: lightsalmon;
-    z-index: 1;
+  height: 60px;
+  background-color: lightsalmon;
+  z-index: 1;
 }
 #go_to_top {
-    /* background-color: yellow; */
-    display: inline;
-    position: fixed;
-    top: 92vh;
-    left: 95vw;
-    z-index: 0;
+  /* background-color: yellow; */
+  display: inline;
+  position: fixed;
+  top: 92vh;
+  left: 95vw;
+  z-index: 0;
 }
-#go_to_top > a> img {
-    height: 50px;
+#go_to_top > a > img {
+  height: 50px;
 }
 #reset_zoom {
-    background: black;
-    color: white;
-    border-radius: 0.4rem;
-    /* font-weight: 600; */
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border: 1px solid darkslategray;
-    font-size: 12px;
+  background: black;
+  color: white;
+  border-radius: 0.4rem;
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid darkslategray;
+  font-size: 12px;
 }
 .map_btns {
-    display: flex;
-    justify-content: space-between;
-    width: 600px;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
 }
 .annotate {
-    position: absolute;
-    background-color: white;
-    border-radius: 0.3rem;
-    border: 1px solid lightgrey;
-    height: 100px;
-    width: 100px;
+  position: absolute;
+  background-color: white;
+  border-radius: 0.3rem;
+  border: 1px solid lightgrey;
+  height: 100px;
+  width: 100px;
+}
+.img_container {
+  text-align: center;
+  font-size: small;
+  width: 400px;
+  margin: auto;
 }
